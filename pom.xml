@@ -6,11 +6,11 @@
     <version>1.519</version>
   </parent>
 
-  <artifactId>Parameterized-Remote-Trigger</artifactId>
+  <artifactId>WW-Parameterized-Remote-Trigger</artifactId>
   <version>2.2.1-SNAPSHOT</version>
   <packaging>hpi</packaging>
-  <name>Parameterized Remote Trigger Plugin</name>
-  <description>This plugin gives you the ability to trigger parameterized builds on a remote Jenkins server as part of your build.</description>
+  <name>Parameterized Remote Trigger Plugin (Westwing)</name>
+  <description>This Westwing fork of the said plugin gives you the ability to successfully trigger parameterized builds on a remote Jenkins server as part of your build.</description>
   <url>http://wiki.jenkins-ci.org/display/JENKINS/Parameterized+Remote+Trigger+Plugin</url>
    
   <licenses>

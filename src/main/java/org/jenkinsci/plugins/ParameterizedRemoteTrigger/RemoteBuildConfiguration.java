@@ -1283,7 +1283,7 @@ v         */
          * This human readable name is used in the configuration screen.
          */
         public String getDisplayName() {
-            return "Trigger a remote parameterized job";
+            return "WW - Trigger a remote parameterized job";
         }
 
         @Override

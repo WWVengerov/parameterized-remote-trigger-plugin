@@ -856,6 +856,14 @@ public class RemoteBuildConfiguration extends Builder {
                 is = connection.getErrorStream();
             }
             
+            // if the error stream is empty, which can happen we do not want to access it by handling it over to the BufferedReader in the next lines
+            try {
+               	BufferedReader rd = new BufferedReader(new InputStreamReader(is));
+            } catch (NullPointerException nullPointer) {
+            	listener.getLogger().println("Remote Jenkins server returned empty response or invalid JSON - also the Error stream is not available. We just do nothing and can still proceed with the remote build.");
+            	return null;
+            }
+            
             BufferedReader rd = new BufferedReader(new InputStreamReader(is));
             String line;
             // String response = "";

@@ -856,7 +856,14 @@ public class RemoteBuildConfiguration extends Builder {
                 is = connection.getErrorStream();
             }
             
-            BufferedReader rd = new BufferedReader(new InputStreamReader(is));
+            BufferedReader rd = null;
+
+            try {
+                rd = new BufferedReader(new InputStreamReader(is));
+            } catch (NullPointerException nullPointer) {
+                throw new IOException();
+            }
+            
             String line;
             // String response = "";
             StringBuilder response = new StringBuilder();
